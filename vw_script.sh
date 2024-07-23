@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo mkdir -p /var/www/html
+# sudo mkdir -p /var/www/html
 # sudo -s
 # # Update package lists
 # apt-get update -y
