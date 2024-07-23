@@ -1,16 +1,13 @@
 #!/bin/bash
-# sudo mkdir -p /var/www/html
-# sudo -s
-# # Update package lists
-# apt-get update -y
-
-# # Install utilities
-# apt-get install dialog apt-utils -y
-
-# # Install Nginx
-# apt-get install -y nginx
-# systemctl enable nginx
-# systemctl start nginx
-
-# Create a simple HTML file with "Hello from your web application!"
+sudo mkdir -p /var/www/html
+echo "Directory created" | sudo tee /var/log/custom-script.log
+sudo apt-get update -y
+echo "Packages updated" | sudo tee -a /var/log/custom-script.log
+sudo apt-get install dialog apt-utils -y
+echo "Utilities installed" | sudo tee -a /var/log/custom-script.log
+sudo apt-get install -y nginx
+sudo systemctl enable nginx
+sudo systemctl start nginx
+echo "Nginx installed and started" | sudo tee -a /var/log/custom-script.log
 echo "Hello from your web application!" | sudo tee /var/www/html/index.html
+echo "index.html created" | sudo tee -a /var/log/custom-script.log
